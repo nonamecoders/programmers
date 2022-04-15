@@ -3,13 +3,11 @@ package level2;
 public class Fatigue {
 
     static int count = 0;
-    static boolean[] visited;
+
 
     public int solution(int k, int[][] dungeons) {
-
-        visited = new boolean[dungeons.length];
+        boolean[] visited = new boolean[dungeons.length];
         int[][] v2 = new int[dungeons.length][2];
-
 
         dfs(k, dungeons, visited, 0);
 

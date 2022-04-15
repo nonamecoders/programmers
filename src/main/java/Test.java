@@ -31,4 +31,5 @@ public class Test {
         isSelected[cnt]=false;
         generateSubSet(cnt+1);
     }
+
 }

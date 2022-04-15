@@ -27,7 +27,6 @@ public class FindPrimeUntilNum {
 
     public int solution(int n) {
 
-
         return prime(n);
     }
 

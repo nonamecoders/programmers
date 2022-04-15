@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class IntegerDesc {
 
-
+    //각 자리 숫자 역정
     public long solution(long n) {
         StringBuffer sb= new StringBuffer();
         int[] arrNum = Stream.of(String.valueOf(n).split("")).mapToInt(Integer::parseInt).toArray();
@@ -17,6 +17,7 @@ public class IntegerDesc {
         for(int i:arrNum)
             list.add(i);
 
+        //역정렬
         Collections.sort(list, Collections.reverseOrder());
 
         for(int i = 0;i<list.size();i++){

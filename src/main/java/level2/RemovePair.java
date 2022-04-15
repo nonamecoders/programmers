@@ -1,6 +1,5 @@
 package level2;
 
-import sun.rmi.rmic.RemoteClass;
 
 import java.util.Stack;
 

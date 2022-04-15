@@ -2,6 +2,7 @@ import java.util.HashSet;
 
 public class Main {
 
+    //소수찾
     public boolean isPrime(int n){
         if(n<2) return false;
         if(n==2) return true;
@@ -13,6 +14,7 @@ public class Main {
         return true;
     }
 
+    //풀조합
     public void cycle(String prefix, String number, HashSet<Integer> set) {
         int len = number.length();
         if(!prefix.equals("")) {
@@ -35,7 +37,7 @@ public class Main {
             set.remove(a);
 
             if(isPrime(a)){
-                System.out.println("+++ coount up +++");
+                System.out.println("+++ count up +++");
                 count++;
             }
         }
@@ -43,7 +45,7 @@ public class Main {
     }
     public static void main(String[] args) {
 
-        String numbers = "17";
+        String numbers = "147";
         Main main = new Main();
         System.out.println(main.solution(numbers));
 

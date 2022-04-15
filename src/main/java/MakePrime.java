@@ -1,5 +1,27 @@
 public class MakePrime {
 
+    static int count =0;
+    static int[] choice3 = new int [3];
+
+    public void comb(int cnt,int start,int[] nums){
+
+        if(cnt==3){
+            int sum=0;
+            for(int i: choice3)
+                sum += i;
+
+            if(isPrime(sum)){
+                count++;
+            }
+            return;
+        }
+
+        for(int i= start;i<nums.length;i++){
+            choice3[cnt] = nums[i];
+            comb(cnt+1,i+1,nums);
+        }
+    }
+
     public boolean isPrime(int n){
         if(n<2) return false;
         if(n==2) return true;
@@ -12,13 +34,12 @@ public class MakePrime {
     }
 
     public int solution(int[] nums) {
-        int answer = -1;
 
         //각 숫자 조합 3자리
-
+        comb(0,0,nums);
         // 소수인지 아닌지 카운팅
 
-        return answer;
+        return count;
     }
 
     public static void main(String[] args) {

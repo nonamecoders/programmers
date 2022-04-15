@@ -45,14 +45,12 @@ public class BracketRotation {
         int count =0;
 
         for(int i=0;i <s.length(); i++){
-            if(1==0){
-                count += correct(s);
-            } else{
+
                 String start =change.substring(0,1);
                 String end = change.substring(1,s.length());
                 change = end +start;
                 count += correct(change);
-            }
+
         }
 
         return count;

@@ -2,6 +2,7 @@ package level1;
 
 public class GcdLcm {
 
+    //최소공배수 최대공약수
     public int getGCD(int n,int m){
 
         if(m ==0) return n;

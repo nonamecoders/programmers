@@ -1,6 +1,7 @@
 package level1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class SemiExam {
@@ -41,6 +42,7 @@ public class SemiExam {
                 list.add(i+1);
             }
         }
+
         return list.stream().mapToInt(i->i).toArray();
     }
 

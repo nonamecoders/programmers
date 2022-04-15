@@ -2,6 +2,7 @@ package level1;
 
 import java.util.Stack;
 
+//3진법 뒤집기
 public class ReverseTernary {
 
     public int solution(int numbers) {

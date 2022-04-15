@@ -2,10 +2,15 @@ import java.util.Arrays;
 
 public class Comb {
 
+    /*
+    *  배열의 세개의 숫자의 합이 소수일 때 카운트
+    * */
     static int count =0;
+    //선택 개수 설정 배열
     static int[] choice3 = new int [3];
 
     public void comb(int cnt,int start,int[] nums){
+
         if(cnt==3){
             int sum=0;
             System.out.println(Arrays.toString(choice3));

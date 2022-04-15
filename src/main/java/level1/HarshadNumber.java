@@ -4,6 +4,7 @@ import java.util.stream.Stream;
 
 public class HarshadNumber {
 
+    //하샤드 수 (각 자리의 수의 합으로 그 수를 나누었을 때 0인 숫자)
     public boolean solution(int x) {
         boolean answer = false;
         int sum = 0;

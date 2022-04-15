@@ -6,6 +6,7 @@ import java.util.Set;
 
 public class HateSameNum {
 
+    //이전 배열 숫자 중복제거
     public int[] solution(int []arr) {
 
         ArrayList<Integer> list = new ArrayList<>();
@@ -16,10 +17,14 @@ public class HateSameNum {
             }
         }
 
-        int[] answer = new int[list.size()];
-        for(int i = 0; i<list.size(); i++ ){
-            answer[i] = list.get(i);
-        }
+//        int[] answer = new int[list.size()];
+
+
+//        for(int i = 0; i<list.size(); i++ ){
+//            answer[i] = list.get(i);
+//        }
+
+        int[] answer = list.stream().mapToInt(i->i).toArray();
 
         return answer;
     }
