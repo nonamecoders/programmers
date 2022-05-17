@@ -7,35 +7,44 @@ import java.util.*;
 
 public class BackJoon4383 {
 
+    static boolean[] temp;
+    //todo
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        for(int c=0;c<2;c++) {
-            List<Integer> list = new ArrayList<>();
-            Set<Integer> jolly = new HashSet<>();
+        while (true) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            int n = Integer.parseInt(st.nextToken());
-            if(n==1) {
-                System.out.println("Jolly");
 
-            } else {
-                for (int i = 0; i < n; i++) {
-                    list.add(Integer.parseInt(st.nextToken()));
-                    if (i != n - 1)
-                        jolly.add(i + 1);
-                }
+            if(st.countTokens() > 1) {
 
-                for (int i = 0; i < n - 1; i++) {
-                    int diff = Math.abs(list.get(i) - list.get(i + 1));
-                    if (!jolly.contains(diff)) {
-                        break;
-                    } else {
-                        jolly.remove(diff);
+                int n = Integer.parseInt(st.nextToken());
+                int[] arr = new int[n];
+                temp = new boolean[3000];
+                if (n == 1) {
+                    System.out.println("Jolly");
+
+                } else {
+                    for (int i = 0; i < n; i++) {
+                        arr[i] = Integer.parseInt(st.nextToken());
+                    }
+                    for (int i = 0; i < arr.length - 1; i++) {
+                        int sum = Math.abs(arr[i] - arr[i + 1]);
+                        temp[sum] = true;
+                    }
+                System.out.println(Arrays.toString(temp));
+
+
+                    for (int i = 1; i < n; i++) {
+                        if (temp[i] != true) {
+                            System.out.println("Not jolly");
+                            break;
+                        }
+                        if (i == n - 1)
+                            System.out.println("Jolly");
                     }
                 }
-
-                if (jolly.isEmpty()) System.out.println("Jolly");
-                else System.out.println("Not jolly");
+            } else {
+                break;
             }
         }
     }
